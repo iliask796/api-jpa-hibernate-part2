@@ -1,5 +1,6 @@
 package com.boleanuk.music.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -17,6 +18,7 @@ public class Album{
     private Integer rating;
     @ManyToOne
     @JoinColumn(name = "artist_id")
+    @JsonIgnoreProperties({"albums"})
     private Artist artist;
     @ManyToOne
     @JoinColumn(name = "record_company_id")
