@@ -40,8 +40,8 @@ public class AlbumController {
             albumToUpdate.setTitle(album.getTitle());
             albumToUpdate.setYear(album.getYear());
             albumToUpdate.setRating(album.getRating());
-            albumToUpdate.setArtistId(album.getArtistId());
-            albumToUpdate.setRecordCompanyId(album.getRecordCompanyId());
+            albumToUpdate.setArtist(album.getArtist());
+            albumToUpdate.setRecordCompany(album.getRecordCompany());
         } catch (Exception e) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Update failed. Please check fields.");
         }

@@ -15,6 +15,10 @@ public class Album{
     private String title;
     private Integer year;
     private Integer rating;
-    private Integer artistId;
-    private Integer recordCompanyId;
+    @ManyToOne
+    @JoinColumn(name = "artist_id")
+    private Artist artist;
+    @ManyToOne
+    @JoinColumn(name = "record_company_id")
+    private RecordCompany recordCompany;
 }
